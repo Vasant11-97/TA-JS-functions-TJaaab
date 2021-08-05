@@ -2,6 +2,14 @@
 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 */
 
+
+function helloWorld(){
+  alert(`Say Hello`);
+}
+
+helloWorld();
+
+
 /*
 2. Create a function named `fullName` with the following steps:
 
@@ -11,6 +19,15 @@
   - Alert `fullName`
 */
 
+function fullName(){
+  let firstName = prompt(`Enter your first name : `);
+  let lastName = prompt(`Enter your last name : `);
+  let fullName = firstName + lastName ; 
+  alert(`${fullName}`);
+}
+fullName();
+
+
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
 
@@ -19,6 +36,17 @@
   - Add the value of firstNum and secondNum and store it in another variable named `sum`.
   - Alert `sum`
 */
+
+
+function addTwoNumbers(){
+  let firstNum = +prompt(`Enter the first number : `);
+  let secondNum = +prompt(`Enter the second number : `);
+  let sum = firstNum + secondNum;
+  alert(`${sum}`)
+
+}
+addTwoNumbers();
+
 
 /*
 4. Create a function named `getTable` with the following steps:
@@ -39,12 +67,45 @@
   9 * 10 = 90
 */
 
+function getTable(){
+  let num = +prompt(`Enter a number : `);
+  let table = (`
+  ${num} * 1 = ${num * 1} \n 
+  ${num} * 2 = ${num * 2} \n 
+  ${num} * 3 = ${num * 3} \n
+  ${num} * 4 = ${num * 4} \n
+  ${num} * 5 = ${num * 5} \n 
+  ${num} * 6 = ${num * 6} \n 
+  ${num} * 7 = ${num * 7} \n 
+  ${num} * 8 = ${num * 8} \n 
+  ${num} * 9 = ${num * 9} \n
+  ${num} * 10 = ${num * 10} `);
+
+  if(num>0){
+    alert(`${table}`);
+  } else{
+    alert(`Enter the correct value.`)
+  }
+}
+getTable();
+
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
   - Prompts a message saying `Enter a year` and store the value into variable named`year`
   - Alert `[year] is a leap year` otherwise `[year] is not a leap year`
 */
+
+
+function isLeapYear(){
+  let year = +prompt(`Enter the year : `);
+  if( year % 4 == 0){
+    alert(`It is a leap year`);
+  } else {
+    alert(`The given year is not a leap year.`);
+  }
+}
+isLeapYear();
 
 /*
 6. Create a function named `getFactorial` with the following steps:
@@ -53,3 +114,19 @@
   - Alert `The factorial of [number] is [factorial]`
 
 */
+
+function getFactorial(){
+  
+  let number = +prompt(`Enter the number for factorial : `);
+  if(number < 0){
+    alert(`The value should not be less then 0.`)
+  } else {
+    let factorial = 1;
+    for( i = 1; i <= number; i++){
+      factorial *= i;
+    }
+    alert(`The factorial of the given ${number} is ${factorial}`);
+  }
+}
+getFactorial();
+
